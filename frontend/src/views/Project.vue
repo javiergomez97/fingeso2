@@ -41,14 +41,17 @@ export default {
     methods:{ 
         send:async function(){ 
             this.message = '';
+            this.newProject.owner = 'usuarioLogueado';
             if (this.newProject.name == ''){ 
                 this.message = 'Debes ingresar un nombre' 
                 return false 
             }
             try { 
-                var result = await this.$http.post('/api/projects', this.newProject);
-                let project = result.data; 
-                this.message = 'Se creó un nuevo proyecto con id: ${proyect.data._id}';
+                var result = await this.$http.post('/api/projects',
+                this.newProject);
+                let project = result.data;
+                this.message = `Se creó un nuevo contacto con id:
+                ${project.data._id}`;
                 this.newProject = {}; 
             } catch (error) {
                 console.log('error', error) 

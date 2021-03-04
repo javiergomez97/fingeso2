@@ -9,6 +9,10 @@
         <div>
             <label for="lastname">Apellido</label> 
             <input type="text" id="lastname" v-model="newUser.last_name">
+        </div> 
+        <div>
+            <label for="username">Nombre de Usuario</label> 
+            <input type="text" id="username" v-model="newUser.username">
         </div>  
         <div>
             <label for="email">Email</label> 
@@ -19,10 +23,10 @@
             <input type="number" id="phone" v-model="newUser.phone"> 
         </div>
             <label for="select">Seleccione su rol</label>
-            <select id="select" v-model="selected">
+            <select id="rol" v-model="newUser.rol">
                 <option disabled value="">Seleccione..</option>
-                <option>Cliente</option>
-                <option>Especialista</option>
+                <option value="Cliente">Cliente</option>
+                <option value="Especialista">Especialista</option>
             </select>
             <span>Selected: {{ selected }}</span> 
         <div>
@@ -63,7 +67,8 @@ export default {
             try { 
                 var result = await this.$http.post('/api/users', this.newUser);
                 let user = result.data; 
-                this.message = `Se creó un nuevo contacto con id: ${user.data._id}`;
+                this.message = `Se creó un nuevo contacto con id:
+                ${user.data._id}`;
                 this.newUser = {}; 
             } catch (error) {
                 console.log('error', error) 

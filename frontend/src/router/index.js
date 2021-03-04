@@ -11,6 +11,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+  }, 
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Profile.vue')
+  }, 
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -18,28 +28,34 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
+  // Insertar luego de la siguiente línea
   { 
-    path: '/user', 
+    path: '/users', 
     name: 'User', 
     component: () => import(/* webpackChunkName: "about" */ '../views/User.vue') 
   },
   { 
-    path: '/project', 
+    path: '/projects', 
     name: 'Project', 
     component: () => import(/* webpackChunkName: "about" */ '../views/Project.vue') 
   },
   { 
-    path: '/publication', 
+    path: '/publications', 
     name: 'Publication', 
     component: () => import(/* webpackChunkName: "about" */ '../views/Publication.vue') 
+  },
+  
+  {
+  path: '/contacts',
+  name: 'Contact',
+  component:() => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 
 export default router
-
-

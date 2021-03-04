@@ -32,7 +32,7 @@
             </div>
             <input type="submit" class="btn btn-primary" value="Login">
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <router-link to="/register" class="card-link">Need and account?</router-link>
+            <router-link to="/users" class="card-link">Need and account?</router-link>
           </form>
         </div>
       </div>

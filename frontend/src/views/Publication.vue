@@ -60,14 +60,17 @@ export default {
     methods:{ 
         send:async function(){ 
             this.message = '';
+            this.newPublication.owner = 'usuarioLogueado';
             if (this.newPublication.name == ''){ 
                 this.message = 'Debes ingresar un nombre' 
                 return false 
             }
             try { 
-                var result = await this.$http.post('/api/publications', this.newPublication);
-                let publication = result.data; 
-                this.message = 'Se creó una nueva publicación con id: ${publication.data._id}';
+                var result = await this.$http.post('/api/publications',
+                this.newPublication);
+                let publication = result.data;
+                this.message = `Se creó una nueva publicación con id:
+                ${publication.data._id}`;
                 this.newPublication = {}; 
             } catch (error) {
                 console.log('error', error) 
