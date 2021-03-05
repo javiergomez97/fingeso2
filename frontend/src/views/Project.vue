@@ -1,30 +1,42 @@
 <template> 
 <div class="container">
-    <h1>Crear Proyecto</h1> 
-    <form> 
-        <div>
-            <label for="name">Nombre del Proyecto</label> 
-            <input type="text" id="name" v-model="newProject.name">
-        </div>
-        <div>
-            <label for="area">Area del Proyecto</label> 
-            <input type="text" id="area" v-model="newProject.area">
-        </div>  
-        <div>
-            <label for="desc">Descripción del Proyecto</label> 
-            <input type="text" id="desc" v-model="newProject.description"> 
-        </div> 
-        <div>
-            <button type="button" @click="send">Crear</button> 
-        </div> 
-        <div class="info">
-            <h2>Objeto</h2> 
-            <code>{{newProject}}</code> 
-            <p class="message"> 
-                {{message}} 
-            </p> 
-        </div>
-    </form> 
+    <h1>Crear Proyecto</h1>
+                <v-form
+                ref="form"
+                v-model="valid"
+                lazy-validation
+            >
+                <v-text-field
+                v-model= "newProject.name"
+                id="name"
+                label="Nombre del Proyecto"
+                required
+                ></v-text-field>
+
+                <v-text-field
+                v-model= "newProject.area"
+                label="Área del Proyecto"
+                id="area" 
+                required
+                ></v-text-field>
+
+                <v-text-field
+                v-model= "newProject.description"
+                id="desc"
+                label="Descripción del Proyecto"
+                required
+                ></v-text-field>
+            <div>
+                <v-btn rounded color="primary" dark @click="send">Crear</v-btn> 
+            </div>
+            <div class="info">
+                <h2>Objeto</h2> 
+                <code>{{newProject}}</code> 
+                <p class="message"> 
+                    {{message}} 
+                </p> 
+            </div>
+            </v-form> 
 </div> 
 </template>
 
