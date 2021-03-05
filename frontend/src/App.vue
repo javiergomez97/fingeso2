@@ -1,76 +1,51 @@
 <template>
-  <v-app>
-    <v-content>
-      <router-view></router-view>
-    </v-content>
-  </v-app>
-
   <div id="app">
-     <v-card id="lateral">
-    <v-toolbar
-      dark
-      tabs
-      flat
-      color="indigo"
-    >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-toolbar-title>Symbiose Projects Managment</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-      <template v-slot:extension>
-        <v-tabs
-          v-model="tabs"
-          align-with-title
-        >
-          <v-tab href="#one">
-            Publicaciones
-          </v-tab>
-          <v-tab href="#two">
-            Postulaciones
-          </v-tab>
-          <v-tab href="#three">
-            Item Three
-          </v-tab>
-          <v-tabs-slider color="pink"></v-tabs-slider>
-        </v-tabs>
-      </template>
-    </v-toolbar>
-  </v-card>
-  <div>
-    
-  </div>
-  <div>
-  <router-view/>
-  </div>
+    <v-card id="lateral">
+      <v-toolbar dark tabs flat color="indigo">
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-toolbar-title>Symbiose Projects Managment</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+        <template v-slot:extension>
+          <v-tabs v-model="tabs" align-with-title>
+            <v-tab href="#one"> Publicaciones </v-tab>
+            <v-tab href="#two"> Postulaciones </v-tab>
+            <v-tab href="#three"> Item Three </v-tab>
+            <v-tabs-slider color="pink"></v-tabs-slider>
+          </v-tabs>
+        </template>
+      </v-toolbar>
+    </v-card>
+    <div></div>
+    <div>
+      <router-view />
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/contacts">Create</router-link> |
       <router-link to="/users">User</router-link> |
       <router-link to="/projects">Project</router-link> |
-      <router-link to="/publications">Publication</router-link> 
+      <router-link to="/publications">Publication</router-link>
     </div>
-    
   </div>
 </template>
 
 
 <script>
 export default {
-  name: 'App',
-  components: {
-    
-  },
+  name: "App",
+  components: {},
   data: () => ({
     //
   }),
 };
-</script>
+</script> <!--
   export default {
     data: () => ({
       fab: false,
@@ -89,7 +64,14 @@ export default {
       },
     },
   }
-</script>
+  
+<v-app>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+  </v-app>
+  
+</script> -->
 
 <style>
 #app {
@@ -113,11 +95,10 @@ export default {
   color: #42b983;
 }
 
-  /* This is for documentation purposes and will not be needed in your application */
-  #lateral .v-btn--example {
-    bottom: 0;
-    position: absolute;
-    margin: 0 0 16px 16px;
-  }
-
+/* This is for documentation purposes and will not be needed in your application */
+#lateral .v-btn--example {
+  bottom: 0;
+  position: absolute;
+  margin: 0 0 16px 16px;
+}
 </style>
