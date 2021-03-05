@@ -22,14 +22,10 @@ app.listen(port, function () {
     console.log('Running RestHub on port ' + port);
 });
 
-
-
-
-
 // Configure bodyparser to handle post requests
 app.use(bodyParser.urlencoded ({
     extended: true
-    }));
+}));
 app.use(bodyParser.json());
 app.use(cors());
 // Insertar luego de la siguiente línea
@@ -39,9 +35,11 @@ let apiRoutes = require('./api-routes')
 
 //Use API routes in the App
 app.use('/api', apiRoutes);// Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost:27017/mongodatabase', { useNewUrlParser:
-    true});
-    var db = mongoose.connection;
+mongoose.connect('mongodb://localhost:27017/mongodatabase', {
+    useNewUrlParser:
+        true
+});
+var db = mongoose.connection;
 
 
 

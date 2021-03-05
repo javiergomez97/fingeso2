@@ -49,7 +49,7 @@
                         <h3 class="text-center mt-4">Olvidaste tu contraseña ?</h3>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn to="/projects" rounded color="teal accent-3" dark>INGRESAR</v-btn>
+                        <v-btn to="/dashboard" rounded color="teal accent-3" dark>INGRESAR</v-btn>
                         <br><br>
                       </div>
                     </v-col>
@@ -123,7 +123,7 @@
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn to="/projects" rounded color="teal accent-3" dark>REGISTRARSE</v-btn>
+                        <v-btn to="/dashboard" rounded color="teal accent-3" dark>REGISTRARSE</v-btn>
                         <br><br>
                       </div>
                     </v-col>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <v-app id="inspire">
     <v-card id="lateral">
       <v-toolbar dark tabs flat color="indigo">
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -27,25 +27,17 @@
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/getprjct">Ver Proyectos</router-link> |
+      <router-link to="/about">About</router-link> |
       <router-link to="/contacts">Create</router-link> |
       <router-link to="/users">User</router-link> |
       <router-link to="/projects">Project</router-link> |
       <router-link to="/publications">Publication</router-link>
     </div>
-  </div>
+  </v-app>
 </template>
 
 
 <script>
-export default {
-  name: "App",
-  components: {},
-  data: () => ({
-    //
-  }),
-};
-</script> <!--
   export default {
     data: () => ({
       fab: false,
@@ -65,13 +57,7 @@ export default {
     },
   }
   
-<v-app>
-    <v-content>
-      <router-view></router-view>
-    </v-content>
-  </v-app>
-
-</script> -->
+</script>
 
 <style>
 #app {

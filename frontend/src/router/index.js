@@ -55,11 +55,15 @@ const routes = [
     name: 'New Publication', 
     component: () => import(/* webpackChunkName: "about" */ '../views/Publication.vue') 
   },
-  
   {
-  path: '/contacts',
-  name: 'Contact',
-  component:() => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+  path: '/dashboard',
+  name: 'Dashboard',
+  component:() => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue')
+  },
+  {
+  path: '/getprjct',
+  name: 'GetProjects',
+  component:() => import(/* webpackChunkName: "about" */ '../views/GetProjects.vue')
   }
 ]
 
