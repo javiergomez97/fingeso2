@@ -12,6 +12,7 @@ var contactController = require('./contactController');
 var userController = require('./userController');
 var projectController = require('./projectController');
 var publicationController = require('./publicationController');
+var postulationController = require('./postulationController')
 // Contact routes
 router.route('/contacts')
     .get(contactController.index)
@@ -55,6 +56,17 @@ router.route('/publications/:publication_id')
     .patch(publicationController.update)
     .put(publicationController.update)
     .delete(publicationController.delete);
+
+    // Postulant routes.
+router.route('/publication/postulants')
+.get(postulationController.index)
+.post(postulationController.new);
+
+router.route('/postulants/:postulant_id')
+.get(postulationController.view)
+.patch(postulationController.update)
+.put(postulationController.update)
+.delete(postulationController.delete);
 
 // Export API routes
 module.exports = router;

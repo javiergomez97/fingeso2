@@ -55,6 +55,13 @@ const routes = [
     name: 'New Publication', 
     component: () => import(/* webpackChunkName: "about" */ '../views/Publication.vue') 
   },
+
+  { 
+    path: '/publication/postulants', 
+    name: 'Postulants', 
+    component: () => import(/* webpackChunkName: "about" */ '../views/Postulant.vue') 
+  },
+
   {
   path: '/dashboard',
   name: 'Dashboard',

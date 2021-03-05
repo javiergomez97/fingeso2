@@ -2,19 +2,18 @@
 
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <img alt="Symbiose logo" src="../assets/symbiose-logo-72.png">
     <p>
       El lugar donde podrás encontrar y crear proyectos a tu medida.
     </p>
     <h3>Proyectos.</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">Buscar Proyectos</a></li>
-      <li><a href="http://localhost:8082/projects" target="_blank" rel="noopener">Crear Proyecto</a></li>
+      <li><a href="http://localhost:8080/projects" target="_blank" rel="noopener">Crear Proyecto</a></li>
     </ul>
     <h3>Publicaciones.</h3>
     <ul>
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">Buscar Publicaciones</a></li>
-      <li><a href="http://localhost:8082/publications" target="_blank" rel="noopener">Crear Publicación</a></li>
+      <li><a href="http://localhost:8080/publications" target="_blank" rel="noopener">Crear Publicación</a></li>
       
     </ul>
     <h3></h3>

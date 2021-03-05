@@ -59,18 +59,17 @@
                 required
                 ></v-select>
 
-                <span>Selected: {{ selected }}</span> 
+                <!--span>Selected: {{ selected }}</span--> 
 
             <div>
                 <v-btn rounded color="primary" dark @click="send">Crear</v-btn> 
             </div>
-            <div class="info">
-            <h2>Objeto</h2> 
-            <code>{{newPublication}}</code> 
+
+             <div class="info">
             <p class="message"> 
                 {{message}} 
             </p> 
-        </div>
+        </div> 
             </v-form> 
    
 </div> 

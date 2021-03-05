@@ -13,9 +13,11 @@
         </v-btn>
         <template v-slot:extension>
           <v-tabs v-model="tabs" align-with-title>
-            <v-tab href="#one"> Publicaciones </v-tab>
-            <v-tab href="#two"> Postulaciones </v-tab>
-            <v-tab href="#three"> Item Three </v-tab>
+            <v-tab href="http://localhost:8080"> Home </v-tab>
+            <v-tab href="http://localhost:8080/getprjct"> Proyectos </v-tab>
+            <v-tab href="http://localhost:8080/publication/postulants"> Postulaciones </v-tab>
+            <v-tab href="http://localhost:8080/newproject"> Nuevo Proyecto </v-tab>
+            <v-tab href="http://localhost:8080/newpublication"> Nueva Publicación </v-tab>
             <v-tabs-slider color="pink"></v-tabs-slider>
           </v-tabs>
         </template>
@@ -26,12 +28,6 @@
       <router-view />
     </div>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/getprjct">Ver Proyectos</router-link> |
-      <router-link to="/contacts">Create</router-link> |
-      <router-link to="/users">User</router-link> |
-      <router-link to="/projects">Project</router-link> |
-      <router-link to="/publications">Publication</router-link>
     </div>
   </div>
 </template>

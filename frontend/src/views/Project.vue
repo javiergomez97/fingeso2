@@ -30,12 +30,10 @@
                 <v-btn rounded color="primary" dark @click="send">Crear</v-btn> 
             </div>
             <div class="info">
-                <h2>Objeto</h2> 
-                <code>{{newProject}}</code> 
                 <p class="message"> 
                     {{message}} 
                 </p> 
-            </div>
+            </div> 
             </v-form> 
 </div> 
 </template>
@@ -62,7 +60,7 @@ export default {
                 var result = await this.$http.post('/api/projects',
                 this.newProject);
                 let project = result.data;
-                this.message = `Se creó un nuevo contacto con id:
+                this.message = `Se creó un nuevo proyecto con id:
                 ${project.data._id}`;
                 this.newProject = {}; 
             } catch (error) {

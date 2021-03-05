@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <v-main>
-    <h1>Get Projects</h1>
+    <h1>Proyectos Publicados</h1>
     <v-simple-table>
       <thead>
         <tr>
@@ -19,9 +19,7 @@
       </tbody>
     </v-simple-table>
     <router-link to="/">
-      <button class="brn btn-large btn-block btn-success full-width">
-        Add User
-      </button>
+      
     </router-link>
   </v-main>
   </div>
